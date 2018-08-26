@@ -7,6 +7,10 @@ html body {
   width: 100vw;
   background-color: #9999ff;
   font-family: monospace; }
+  html body h2, html body p {
+    color: white;
+    margin: 5% auto;
+    width: 80%; }
   html body #background {
     position: absolute;
     background-color: purple;

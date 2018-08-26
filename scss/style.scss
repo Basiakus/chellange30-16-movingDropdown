@@ -8,6 +8,11 @@ html {
 		width: 100vw;
 		background-color: rgb(153, 153, 255);
 		font-family: monospace;
+		h2, p {
+			color: white;
+			margin: 5% auto;
+			width: 80%;
+		}
 		#background {
 			position: absolute;
 			background-color: purple;
