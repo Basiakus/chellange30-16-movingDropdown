@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	body {
+		width: 100vw;
+		background-color: rgb(153, 153, 255);
+		font-family: monospace;
+		#background {
+			position: absolute;
+			background-color: purple;
+			border-radius: 10px;
+			opacity: 0;
+			box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+			transition:all 0.2s, opacity 0.1s, transform 0.1s;
+			transform-origin: 50% 0;
+			display: flex;
+    		justify-content: center;
+			border: 2px solid white;
+			border-radius: 3px;
+
+			#square {
+				position: absolute;
+				background-color: white;
+				width: 20px;
+				height: 20px;
+				transform: translateY(-55%) rotate(45deg);
+				border-radius: 3px;
+
+			}
+			#square_mini {
+				position: absolute;
+				background-color: purple;
+				width: 20px;
+				height: 20px;
+				transform: translateY(-40%) rotate(45deg);
+				border-radius: 3px;
+
+			}
+		}
+		#background.showBackground {
+			opacity: 1;
+		}
+		nav  {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			#main_ul {
+				position: relative;
+				width: 40%;
+				display: flex;
+				justify-content: space-between;
+				li {
+					list-style-type: none;
+				}
+				>li {
+					position: relative;
+					width: 20%;
+					display:flex;
+					justify-content: center;
+					border-radius: 3px;
+					a {
+						text-decoration: none;
+						font-size: 20px;
+						background: white;
+						padding:10px 20px;
+						display: inline-block;
+						margin:20px 0;
+						border-radius:5px;
+						color: purple;
+
+					}
+					.dropdown {
+						opacity: 0;
+						position: absolute;
+						text-align: center;
+						color: white;
+						padding: 10px;
+						display: none;
+						transition:opacity .3s;
+						top: -20px;
+						transform: translateY(100px);
+						text-shadow: 2px 2px 7px #145580;
+					}
+					.dropOne {
+						width: 50vw;
+					}
+					.dropTwo {
+						min-width: 20vw;
+					}
+					.dropTree {
+						width: 30vw;
+					}
+				}
+				li.displayBlock {
+					.dropdown {
+						display: block;
+					}
+				}
+				li.opacityOn {
+					.dropdown {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
